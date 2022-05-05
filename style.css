@@ -1,0 +1,188 @@
+:root {
+  /* Color */
+  --white-color: #fff;
+  --black-color: #030303;
+  --blue-color: #045fd4;
+  --red-color: #cc0000;
+  --grey-dark-color: #bfbfbf;
+  --grey-light-color: #e9e9e9;
+  --grey-light2-color: #c0c0c0;
+
+  /* Size */
+  --small-padding: 6px;
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* Font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button,
+button:focus {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--side-padding);
+  background-color: var(--white-color);
+  color: var(--black-color);
+  height: 40px;
+  padding-top: 8px;
+  margin-bottom: var(--padding);
+}
+
+header .logo {
+  font-weight: 100;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+header .logo i {
+  margin-left: var(--padding);
+}
+
+header .icons i {
+  margin-right: var(--padding);
+}
+
+.player {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  text-align: center;
+  /* background-color: var(--black-color); */
+}
+.player video {
+  width: 90%;
+  height: auto;
+  max-width: 1000px;
+}
+.info {
+  padding: var(--padding);
+}
+.hashtags {
+  display: flex;
+  font-size: var(--font-medium);
+  color: var(--blue-color);
+}
+.hashtags li {
+  margin-right: var(--padding);
+}
+.info .metadata .titleAndButton {
+  display: flex;
+}
+.info .metadata .titleAndButton .title {
+  font-size: var(--font-large);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+}
+.info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.actions ul {
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-around;
+}
+.actions button {
+  display: flex;
+  font-size: 14px;
+  /* flex-direction: column; */
+}
+.actions button i {
+  margin-right: var(--small-padding);
+}
+
+.channel {
+  /* display: flex; */
+  justify-content: space-between;
+}
+.channel .metadata {
+  display: flex;
+  /* metadata 안에 item들을 수직 정렬 */
+  align-items: center;
+}
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+}
+.channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+.channel .metadata .subscribeBtn {
+  position: absolute;
+  right: 7%;
+  background-color: red;
+  color: var(--white-color);
+  font-size: var(--font-middle);
+  height: 30px;
+  width: 50px;
+}
+.channel .fe {
+  margin-left: var(--avatar-size);
+  display: block;
+  font-size: var(--font-medium);
+  font-style: arial;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+.UpNext .related {
+  flex: left;
+  width: 50%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.UpNext .related li {
+}
+.UpNext .related li button {
+  /* 넘어가는 글자 아래로 안 내려가게 */
+  box-sizing: border-box;
+  white-space: nowrap;
+  margin: 8px 8px 8px 0px;
+  height: 32px;
+  padding: 0px 12px 0px 12px;
+  /* flex-wrap: wrap; */
+  border: solid 1px var(--grey-light2-color);
+  background-color: var(--grey-light-color);
+  border-radius: 100px;
+  font-size: 14px;
+  font-family: "Roboto";
+}
+.myHover {
+  background-color: var(--grey-dark-color) !important;
+}
+
+.UpNext .related li .active {
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
