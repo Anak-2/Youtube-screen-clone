@@ -186,3 +186,31 @@ ul {
   color: var(--white-color);
   background-color: var(--black-color);
 }
+
+.UpNext .moreVideos {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+
+.UpNext .moreVideos .item {
+  display: flex;
+  /* flex-direction: column; */
+  margin-bottom: 15px;
+}
+
+.UpNext .moreVideos .item :hover {
+  cursor: pointer;
+}
+.UpNext .moreVideos .item .info {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.UpNext .moreVideos .item .moreBtn {
+  display: flex;
+  padding-top: 14px;
+  font-size: var(--font-large);
+  visibility: hidden;
+}

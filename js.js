@@ -47,3 +47,14 @@ for (i = 0; i < upNextBtn.length; i++) {
   upNextBtn[i].children[0].addEventListener("mouseover", mouseOver);
   upNextBtn[i].children[0].addEventListener("mouseleave", mouseLeave);
 }
+
+moreVideos = document.querySelectorAll(".UpNext .moreVideos .item");
+for (i = 0; i < moreVideos.length; i++) {
+  moreVideos[i].addEventListener("mouseover", function (e) {
+    console.log(e.currentTarget.children[2].style);
+    e.currentTarget.children[2].style.visibility = "visible";
+  });
+  moreVideos[i].addEventListener("mouseleave", function (e) {
+    e.currentTarget.children[2].style.visibility = "hidden";
+  });
+}
